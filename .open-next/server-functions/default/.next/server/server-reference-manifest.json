@@ -1,0 +1,319 @@
+{
+  "node": {
+    "001360e1c603e3f5f7915d8378f9fe5958921f2be6": {
+      "workers": {
+        "app/admin/(dashboard)/administrateurs/page": {
+          "moduleId": 60435,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/categories/[id]/page": {
+          "moduleId": 27609,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/categories/nouvelle/page": {
+          "moduleId": 66217,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/categories/page": {
+          "moduleId": 54831,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/commandes/[id]/page": {
+          "moduleId": 56522,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/commandes/page": {
+          "moduleId": 87635,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/page": {
+          "moduleId": 67397,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/parametres/page": {
+          "moduleId": 26284,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/produits/[id]/page": {
+          "moduleId": 19298,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/produits/importer/page": {
+          "moduleId": 89814,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/produits/nouveau/page": {
+          "moduleId": 23736,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/produits/page": {
+          "moduleId": 74606,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/login/actions.ts",
+      "exportedName": "logoutAction"
+    },
+    "40ddb4e341f09b4f1e5caa9f602895174b11164086": {
+      "workers": {
+        "app/admin/(dashboard)/administrateurs/page": {
+          "moduleId": 60435,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/parametres/page": {
+          "moduleId": 26284,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/parametres/actions.ts",
+      "exportedName": "createAdminAction"
+    },
+    "406e7a26490c3c7b50382ba99a9857fa5c87cbb9fe": {
+      "workers": {
+        "app/admin/(dashboard)/administrateurs/page": {
+          "moduleId": 60435,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/parametres/page": {
+          "moduleId": 26284,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/parametres/actions.ts",
+      "exportedName": "deleteAdminAction"
+    },
+    "40528a62c84e7086aebe8129028660d76d5326985c": {
+      "workers": {
+        "app/admin/(dashboard)/categories/[id]/page": {
+          "moduleId": 27609,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/categories/nouvelle/page": {
+          "moduleId": 66217,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/categories/page": {
+          "moduleId": 54831,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/categories/actions.ts",
+      "exportedName": "toggleCategoryStatus"
+    },
+    "404a015c6741496e0f751522f0a9e1fb97168f75c0": {
+      "workers": {
+        "app/admin/(dashboard)/categories/[id]/page": {
+          "moduleId": 27609,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/categories/nouvelle/page": {
+          "moduleId": 66217,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/categories/page": {
+          "moduleId": 54831,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/categories/actions.ts",
+      "exportedName": "deleteCategory"
+    },
+    "401b9ba5c68ceede03899eafd649c867aee171512a": {
+      "workers": {
+        "app/admin/(dashboard)/categories/[id]/page": {
+          "moduleId": 27609,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/categories/nouvelle/page": {
+          "moduleId": 66217,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/categories/actions.ts",
+      "exportedName": "createCategory"
+    },
+    "60ea19764ac127df23ddd7516e66d0a18d38dcee6d": {
+      "workers": {
+        "app/admin/(dashboard)/categories/[id]/page": {
+          "moduleId": 27609,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/categories/nouvelle/page": {
+          "moduleId": 66217,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/categories/actions.ts",
+      "exportedName": "updateCategory"
+    },
+    "60b4e428e591818fdf380e77fe0dc013776d93578d": {
+      "workers": {
+        "app/admin/(dashboard)/commandes/[id]/page": {
+          "moduleId": 56522,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/commandes/actions.ts",
+      "exportedName": "updateOrderStatus"
+    },
+    "403bd67285610704431c9d8fa5cdf36f376bb9cd95": {
+      "workers": {
+        "app/admin/(dashboard)/parametres/page": {
+          "moduleId": 26284,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/parametres/actions.ts",
+      "exportedName": "updateSettings"
+    },
+    "4051fb30302ab1652afbb5467d81899c281cf7168e": {
+      "workers": {
+        "app/admin/(dashboard)/produits/page": {
+          "moduleId": 74606,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/produits/actions.ts",
+      "exportedName": "toggleProductStatus"
+    },
+    "4059a60ee4f0f51ed3428f015389a6ae3544ab0140": {
+      "workers": {
+        "app/admin/(dashboard)/produits/page": {
+          "moduleId": 74606,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/produits/actions.ts",
+      "exportedName": "deleteProduct"
+    },
+    "40e91a034940943aad6940d43a7543150d3016196e": {
+      "workers": {
+        "app/admin/(dashboard)/produits/[id]/page": {
+          "moduleId": 19298,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/produits/nouveau/page": {
+          "moduleId": 23736,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/produits/actions.ts",
+      "exportedName": "createProduct"
+    },
+    "60ac2468785b00e169b87504ac218a29ff1faa7e43": {
+      "workers": {
+        "app/admin/(dashboard)/produits/[id]/page": {
+          "moduleId": 19298,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/produits/nouveau/page": {
+          "moduleId": 23736,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/produits/actions.ts",
+      "exportedName": "updateProduct"
+    },
+    "60596eb9736ab049f31d7817af7c2b331239ea4309": {
+      "workers": {
+        "app/admin/(dashboard)/produits/[id]/page": {
+          "moduleId": 19298,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/produits/nouveau/page": {
+          "moduleId": 23736,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/produits/actions.ts",
+      "exportedName": "deleteProductImage"
+    },
+    "60232cbecdbb9c5d32c5e6af640474f234cfffa547": {
+      "workers": {
+        "app/admin/(dashboard)/produits/[id]/page": {
+          "moduleId": 19298,
+          "async": false,
+          "codeHash": null
+        },
+        "app/admin/(dashboard)/produits/nouveau/page": {
+          "moduleId": 23736,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/produits/actions.ts",
+      "exportedName": "setMainImage"
+    },
+    "40a3200aed67d2cca6624da4acdbc799536105dd2b": {
+      "workers": {
+        "app/admin/(dashboard)/produits/importer/page": {
+          "moduleId": 89814,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/(dashboard)/produits/importer/actions.ts",
+      "exportedName": "importProductsCSVAction"
+    },
+    "4044af91bfb2577c94e1dd401133a3f69242720aef": {
+      "workers": {
+        "app/admin/login/page": {
+          "moduleId": 56551,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/admin/login/actions.ts",
+      "exportedName": "loginAction"
+    },
+    "6068ee8245ca128cce778b52db7f56fdfd3d04b54c": {
+      "workers": {
+        "app/commander/page": {
+          "moduleId": 20295,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/commander/actions.ts",
+      "exportedName": "placeOrder"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "WAPeCOl8pNVxdioHr4WTgOMcMhIe7/e/m24CDp1oLBE="
+}

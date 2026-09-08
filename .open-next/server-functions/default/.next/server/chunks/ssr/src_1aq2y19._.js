@@ -1,0 +1,3 @@
+module.exports=[56629,a=>{"use strict";a.s(["default",()=>b]);let b=(0,a.i(11857).registerClientReference)(function(){throw Error("Attempted to call the default export of [project]/src/components/AdminLayoutClient.tsx from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"[project]/src/components/AdminLayoutClient.tsx","default")},49193,a=>{"use strict";var b=a.i(56629);a.n(b)},5621,a=>{"use strict";var b=a.i(7997),c=a.i(49193);a.s(["default",0,function({children:a}){return(0,b.jsx)(c.default,{children:a})}])},37637,function(a){a.n(a.i(5621))}];
+
+//# sourceMappingURL=src_1aq2y19._.js.map

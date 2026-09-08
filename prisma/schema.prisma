@@ -1,0 +1,135 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id            String   @id @default(cuid())
+  username      String   @unique
+  password_hash String
+  createdAt     DateTime @default(now())
+}
+
+model Category {
+  id        String     @id @default(cuid())
+  name      String
+  slug      String     @unique
+  icon      String?    // emoji or icon identifier for display
+  order     Int        @default(0) // display order
+  parentId  String?
+  parent    Category?  @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children  Category[] @relation("CategoryHierarchy")
+  active    Boolean    @default(true)
+  products  Product[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Product {
+  id          String         @id @default(cuid())
+  name        String
+  slug        String         @unique
+  description String?
+  reference   String?
+  price       Float?
+  oldPrice    Float?
+  stock       Int?
+  active      Boolean        @default(true)
+  ageMin      Int?           // minimum age in years (e.g. 0 = 0-12 months)
+  ageMax      Int?           // maximum age in years
+  brand       String?        // brand / marque
+  tags        String?        // comma-separated tags
+  categoryId        String
+  category          Category         @relation(fields: [categoryId], references: [id])
+  images            ProductImage[]
+  orderItems        OrderItem[]
+  
+  // New fields
+  shortDescription  String?
+  purchasePrice     Float?
+  stockThreshold    Int?
+  barcode           String?
+  supplierReference String?
+  weight            Float?
+  
+  variants          ProductVariant[]
+
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+}
+
+model ProductImage {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  isMain    Boolean         @default(false)
+  position  Int             @default(0)
+  variantId String?
+  variant   ProductVariant? @relation(fields: [variantId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+}
+
+model Order {
+  id             String      @id @default(cuid())
+  orderNumber    String      @unique
+  customerName   String
+  customerPhone  String
+  wilaya         String
+  commune        String
+  address        String?
+  message        String?
+  status         String      @default("Nouvelle") // Nouvelle, Contactée, Confirmée, En préparation, Expédiée, Livrée, Annulée
+  totalAmount    Float
+  orderItems     OrderItem[]
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+model OrderItem {
+  id               String   @id @default(cuid())
+  orderId          String
+  order            Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId        String?
+  product          Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  productName      String
+  productReference String?
+  priceAtTime      Float
+  quantity         Int
+  totalLine        Float
+}
+
+model Settings {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+}
+
+model ProductVariant {
+  id                String   @id @default(cuid())
+  productId         String
+  product           Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  color             String
+  colorHex          String?  // optional HEX code (e.g. "#FF4081") for UI colour swatches
+  reference         String?  @unique // SKU
+  price             Float?
+  oldPrice          Float?
+  purchasePrice     Float?
+  stock             Int      @default(0)
+  stockThreshold    Int?
+  barcode           String?
+  supplierReference String?
+  weight            Float?
+
+  // Images are stored in ProductImage with variantId set. The productId field is kept for cascade deletion.
+  images            ProductImage[]
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
