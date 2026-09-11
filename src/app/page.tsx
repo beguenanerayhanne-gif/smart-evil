@@ -7,6 +7,11 @@ import ProductCard from '@/components/ProductCard'
 import HeroSection from '@/components/HeroSection'
 import { ArrowRightIcon, PackageIcon } from '@/components/Icons'
 
+// Désactive le cache statique : la page est toujours rendue côté serveur
+// avec les données les plus récentes de la base de données.
+export const revalidate = 0
+export const dynamic = 'force-dynamic'
+
 export async function generateMetadata() {
   const settings = await prisma.settings.findMany({ select: { key: true, value: true } })
   const settingsMap = Object.fromEntries(settings.map(s => [s.key, s.value]))
@@ -75,7 +80,6 @@ export default async function HomePage() {
       <HeroSection categories={categories} />
 
       <main className="container" style={{ paddingTop: '1.5rem', paddingBottom: '5rem' }}>
-        
 
         {/* Dynamic Promotions Section ("Les Offres du Moment") */}
         {promoProducts.length > 0 && (
@@ -111,7 +115,7 @@ export default async function HomePage() {
             <div>
               <span className="badge badge-success" style={{ marginBottom: '0.5rem' }}>Catalogue</span>
               <h2 style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--gray-900)' }}>
-                Nouveautés & Derniers Arrivages
+                Nouveautés &amp; Derniers Arrivages
               </h2>
               <p style={{ color: 'var(--gray-500)', fontSize: '0.9375rem', marginTop: '0.2rem' }}>
                 Les derniers jouets ajoutés à notre catalogue
