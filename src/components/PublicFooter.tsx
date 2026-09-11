@@ -84,7 +84,7 @@ export default function PublicFooter({
             </a>
 
             <a
-              href="https://www.instagram.com/magasindejouetssmarteveil"
+              href="https://www.instagram.com/magasin_de_jouet_smart_eveil/"
               target="_blank"
               rel="noopener noreferrer"
               style={{

@@ -17,6 +17,7 @@
     "@neondatabase/serverless": "^0.10.1",
     "@prisma/adapter-neon": "^5.22.0",
     "@prisma/client": "^5.21.0",
+    "@supabase/server": "^1.6.0",
     "@supabase/supabase-js": "^2.115.0",
     "@types/ws": "^8.18.1",
     "bcryptjs": "^3.0.3",

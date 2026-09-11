@@ -14,7 +14,7 @@ export async function generateMetadata() {
   const heroSubtitle = settingsMap['hero_subtitle'] ?? 'Magasin de jouets en Algérie'
 
   return {
-    title: `${shopName} - Magasin de Jouets | Vente en Ligne & Livraison 58 Wilayas`,
+    title: `${shopName} - Magasin de Jouets | Vente en Ligne & Livraison 69 Wilayas`,
     description: heroSubtitle,
   }
 }

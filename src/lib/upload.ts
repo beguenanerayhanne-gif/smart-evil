@@ -10,8 +10,13 @@ const BUCKET_NAME = 'product-images'
  * MUST only be called server-side. Never expose the service role key to the client.
  */
 function getSupabaseClient() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL
+  const serviceRoleKey =
+    process.env.SUPABASE_SERVICE_ROLE_KEY ||
+    process.env.SUPABASE_SECRET_KEY ||
+    process.env.SUPABASE_KEY ||
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+    process.env.SUPABASE_ANON_KEY
 
   if (!supabaseUrl || !serviceRoleKey) {
     return null
@@ -71,20 +76,20 @@ export async function saveUploadedFile(
       const { error } = await supabase.storage
         .from(BUCKET_NAME)
         .upload(storagePath, buffer, {
-          contentType: file.type,
-          upsert: false,
+          contentType: file.type || 'image/jpeg',
+          upsert: true,
         })
 
       if (error) {
         console.error('Erreur upload Supabase Storage:', error.message)
-        return { success: false, error: 'Erreur lors de l envoi de l image vers le stockage.' }
+        return { success: false, error: `Erreur Supabase Storage: ${error.message}` }
       }
 
       const { data } = supabase.storage.from(BUCKET_NAME).getPublicUrl(storagePath)
       return { success: true, url: data.publicUrl }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Erreur upload Supabase Storage:', err)
-      return { success: false, error: 'Erreur lors de l envoi de l image vers le stockage.' }
+      return { success: false, error: `Erreur lors de l envoi de l image vers le stockage: ${err?.message || err}` }
     }
   }
 

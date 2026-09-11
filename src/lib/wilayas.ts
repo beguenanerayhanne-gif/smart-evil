@@ -14,4 +14,7 @@ export const WILAYAS = [
   '49 - El M\'Ghair', '50 - El Meniaa', '51 - Ouled Djellal', '52 - Bordj Badji Mokhtar',
   '53 - Béni Abbès', '54 - Timimoun', '55 - Touggourt', '56 - Djanet',
   '57 - In Salah', '58 - In Guezzam',
+  '59 - Aflou', '60 - Barika', '61 - El Kantara', '62 - Bir El Ater',
+  '63 - El Aricha', '64 - Ksar Chellala', '65 - Aïn Ouessara', '66 - Messaad',
+  '67 - Ksar El Boukhari', '68 - Bou Saâda', '69 - El Abiodh Sidi Cheikh',
 ]

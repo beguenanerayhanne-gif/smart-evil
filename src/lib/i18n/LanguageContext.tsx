@@ -26,7 +26,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const saved = localStorage.getItem('smart_lang') as Language
     if (saved && (saved === 'fr' || saved === 'ar' || saved === 'en')) {
       setLanguageState(saved)
-      setDir(saved === 'ar' ? 'rtl' : 'ltr')
+      const newDir = saved === 'ar' ? 'rtl' : 'ltr'
+      setDir(newDir)
+      if (typeof document !== 'undefined') {
+        document.documentElement.setAttribute('dir', newDir)
+        document.documentElement.setAttribute('lang', saved)
+      }
     }
   }, [])
 

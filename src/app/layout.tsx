@@ -5,7 +5,7 @@ import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 
 export const metadata: Metadata = {
   title: "Smart éveil - Magasin de Jouets & Éveil en Algérie",
-  description: "Découvrez notre sélection de jouets et jeux éducatifs de qualité avec livraison dans les 58 Wilayas.",
+  description: "Découvrez notre sélection de jouets et jeux éducatifs de qualité avec livraison dans les 69 Wilayas.",
 };
 
 export default function RootLayout({
