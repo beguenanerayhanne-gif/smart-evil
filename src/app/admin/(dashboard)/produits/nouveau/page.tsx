@@ -1,6 +1,9 @@
 import { prisma } from '@/lib/prisma'
 import ProductFormClient from '../ProductFormClient'
 
+export const revalidate = 0
+export const dynamic = 'force-dynamic'
+
 export const metadata = {
   title: 'Nouveau produit - Administration',
 }

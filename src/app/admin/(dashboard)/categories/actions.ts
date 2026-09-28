@@ -39,6 +39,9 @@ export async function createCategory(formData: FormData): Promise<void> {
   })
 
   revalidatePath('/admin/categories')
+  revalidatePath('/admin/produits/importer')
+  revalidatePath('/admin/produits/nouveau')
+  revalidatePath('/admin/produits')
   revalidatePath('/categories')
   revalidatePath('/')
   redirect('/admin/categories')
@@ -80,6 +83,9 @@ export async function updateCategory(id: string, formData: FormData): Promise<vo
   })
 
   revalidatePath('/admin/categories')
+  revalidatePath('/admin/produits/importer')
+  revalidatePath('/admin/produits/nouveau')
+  revalidatePath('/admin/produits')
   revalidatePath('/categories')
   revalidatePath('/')
   redirect('/admin/categories')
@@ -95,6 +101,9 @@ export async function toggleCategoryStatus(id: string): Promise<{ success: boole
   })
 
   revalidatePath('/admin/categories')
+  revalidatePath('/admin/produits/importer')
+  revalidatePath('/admin/produits/nouveau')
+  revalidatePath('/admin/produits')
   return { success: true }
 }
 
@@ -111,5 +120,8 @@ export async function deleteCategory(id: string): Promise<{ success: boolean; er
 
   await prisma.category.delete({ where: { id } })
   revalidatePath('/admin/categories')
+  revalidatePath('/admin/produits/importer')
+  revalidatePath('/admin/produits/nouveau')
+  revalidatePath('/admin/produits')
   return { success: true }
 }

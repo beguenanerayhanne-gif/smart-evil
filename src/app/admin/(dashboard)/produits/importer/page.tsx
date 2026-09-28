@@ -3,13 +3,15 @@ import Link from 'next/link'
 import CsvImportClient from './CsvImportClient'
 import { ChevronRightIcon, PackageIcon } from '@/components/Icons'
 
+export const revalidate = 0
+export const dynamic = 'force-dynamic'
+
 export const metadata = {
   title: 'Importer des produits CSV - Administration Smart éveil',
 }
 
 export default async function CsvImportPage() {
   const categories = await prisma.category.findMany({
-    where: { active: true },
     orderBy: { name: 'asc' },
     select: { id: true, name: true, slug: true, parentId: true }
   })
